@@ -4,18 +4,18 @@ import Controls from './components/controls.js'
 import Flashcard from './components/flashcard.js'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import app from './reducers.js'
+import flashcardApp from './reducers'
+import { showAnswer, paginateNext } from './actions'
+import App from './app.js'
 
-let store = createStore(app);
+console.log(App);
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <Flashcard />
-        <Controls />
-      </div>)
-  }
-}
+let store = createStore(flashcardApp);
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('main'));
+
+
+
+
+
+

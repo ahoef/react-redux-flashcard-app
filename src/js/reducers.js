@@ -1,17 +1,42 @@
 import { combineReducers } from 'redux'
 
-function example(state = [], action) {
-  switch (action.type) {
-
-    default:
-      return state
-  }
+const initialState = {
+  	answerHidden: true,
+  	randomIndex: 0,
+  	viewedCards: [], //array of objects in the order viewed
 }
 
-const reducers = combineReducers({
-  // otherReducer,
-  example
+
+function answer(state = initialState, action) {
+	switch (action.type) {
+    	case 'SHOW_ANSWER':
+      		return Object.assign({}, state, {
+        		answerHidden: false
+      		})
+    	default:
+      		return state
+  	}
+}
+
+
+// function example(state = [], action) {
+//   switch (action.type) {
+//   	case 'NEXT_CARD':
+//   		return Object.assign({}, state, {
+//         viewedCards: [
+//           ...state.viewedCards, 9
+//         ]
+//       }) 
+
+//     default:
+//       return state
+//   }
+// }
+
+const flashcardApp = combineReducers({
+  // example,
+  answer
 })
 
 
-export default reducers
+export default flashcardApp

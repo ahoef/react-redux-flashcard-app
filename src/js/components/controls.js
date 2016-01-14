@@ -12,6 +12,6 @@ export default class Controls extends Component {
   }
 
   handleClick(e) {
-    $('.answer').show();
+    // $('.answer').show();
   }
 }
