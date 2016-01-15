@@ -8,6 +8,7 @@ const initialState = {
 
 
 function answer(state = initialState, action) {
+	console.log('within answer reducer');
 	switch (action.type) {
     	case 'SHOW_ANSWER':
       		return Object.assign({}, state, {

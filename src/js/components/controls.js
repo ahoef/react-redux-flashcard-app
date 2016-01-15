@@ -1,4 +1,7 @@
 import React, { Component, PropTypes } from 'react'
+import store from '../index.js'
+import { showAnswer, paginateNext } from '../actions'
+
 
 export default class Controls extends Component {
   render() {
@@ -12,6 +15,8 @@ export default class Controls extends Component {
   }
 
   handleClick(e) {
-    // $('.answer').show();
+    console.log(store.getState());
+    store.dispatch(showAnswer());
+    console.log(store.getState());
   }
 }
