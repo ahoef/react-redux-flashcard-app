@@ -1,43 +1,44 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
 const initialState = {
   	answerHidden: true,
-  	randomIndex: 0,
-  	viewedCards: [], //array of objects in the order viewed
+  	nextCard: false
 }
 
-
-function answer(state = initialState, action) {
-	console.log('within answer reducer');
+function changeState(state = initialState, action) {
 	switch (action.type) {
     	case 'SHOW_ANSWER':
       		return Object.assign({}, state, {
-        		answerHidden: false
+        		answerHidden: false,
+        		nextCard: false
+      		})
+      	case 'NEXT_CARD':
+      	    return Object.assign({}, state, {
+        		answerHidden: true,
+        		nextCard: true
       		})
     	default:
-      		return state
+      		return state;
   	}
 }
 
-
-// function example(state = [], action) {
-//   switch (action.type) {
-//   	case 'NEXT_CARD':
-//   		return Object.assign({}, state, {
-//         viewedCards: [
-//           ...state.viewedCards, 9
-//         ]
-//       }) 
-
-//     default:
-//       return state
-//   }
+// function goToNextCard(state = initialState, action) {
+// 	console.log('within nextCard reducer');
+// 	switch (action.type) {
+//       	case 'NEXT_CARD':
+//       	    return Object.assign({}, state, {
+//         		nextCard: true
+//       		})
+//     	default:
+//       		return state;
+//   	}
 // }
 
+
 const flashcardApp = combineReducers({
-  // example,
-  answer
+  // goToNextCard,
+  changeState
 })
 
 
-export default flashcardApp
+export default flashcardApp;

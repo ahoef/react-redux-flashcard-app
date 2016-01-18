@@ -1,18 +1,17 @@
 export function showAnswer() {
-	console.log('within show answer')
   	return { 
   		type: 'SHOW_ANSWER'
   	}
 }
 
-export function paginateNext() {
+export function goToNext() {
   	return { 
   		type: 'NEXT_CARD'
   	}
 }
 
-export function paginateBack() {
-  	return { 
-  		type: 'PREVIOUS_CARD'
-  	}
-}
+// export function goToPrev() {
+//   	return { 
+//   		type: 'PREVIOUS_CARD'
+//   	}
+// }
