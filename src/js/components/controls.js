@@ -1,22 +1,24 @@
-import React, { Component, PropTypes } from 'react'
-import store from '../index.js'
-import { showAnswer, paginateNext } from '../actions'
+import React, { Component } from 'react';
+import store from '../index.js';
+import { showAnswer, goToNext } from '../actions';
 
 
 export default class Controls extends Component {
-  render() {
-    return (
-      <section id="controls">
-        <button className="back" onClick="">&lt;</button>
-        <button className="show-answer" onClick={e => this.handleClick(e)}>show answer</button>
-        <button className="next" onClick="">&gt;</button>
-      </section>
-    )
-  }
+    render() {
+        return (
+            <section id="controls">
+                <button className="back" onClick="">&lt;</button>
+                <button className="show-answer" onClick={e => this.showAnswer()}>show answer</button>
+                <button className="next" onClick={e => this.goToNext()}>&gt;</button>
+            </section>
+        )
+    }
 
-  handleClick(e) {
-    console.log(store.getState());
-    store.dispatch(showAnswer());
-    console.log(store.getState());
-  }
+    showAnswer() {
+        store.dispatch(showAnswer());
+    }
+
+    goToNext() {
+        store.dispatch(goToNext());
+    }
 }
