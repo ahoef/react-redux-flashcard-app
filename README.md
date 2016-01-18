@@ -1,9 +1,10 @@
 # React & Redux Flashcard App
 
-A work-in-progress app built with React & Redux, with a toolset of Babel, Gulp, Browserify and Sass. Users can view flashcard questions, click to reveal answers, and paginate forward and backward through cards.
+A work-in-progress app built with React & Redux, with a toolset of Babel, Gulp, Browserify and Sass. Users can view flashcard questions, click to reveal answers, and paginate forward through cards (still working on backward pagination!).
+
+[www.ahoef.co/photo-flashcards](http://ahoef.co/photo-flashcards/)
 
 This is an alternate implemenation of [this vanilla JS flashcard app](https://github.com/ahoef/es2015-flashcard-app)
-<!-- [www.ahoef.co/flashcards](www.ahoef.co/flashcards) -->
 
 
 ### Development 
