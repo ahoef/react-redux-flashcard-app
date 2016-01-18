@@ -52,5 +52,29 @@ export const flashcardContent = [
 		answer: "It graphs the tones in your image from black (on the left) to white (on the right). The higher the graph at any given point the more pixels of that tone that are present in an image. Shoot for an even balance.",
 		source: "Digital Photography School",
 		sourceUrl: "http://digital-photography-school.com/understanding-histograms/"
+	},
+	{
+		question: "What is split lighting in portrait photography?",
+		answer: "It splits the face exactly into equal halves with one side being in the light, and the other in shadow. To achieve split lighting simply put the light source 90 degrees to the left or right of the subject, and possibly even slightly behind their head.  ",
+		source: "Digital Photography School",
+		sourceUrl: "http://digital-photography-school.com/6-portrait-lighting-patterns-every-photographer-should-know/"
+	},
+	{
+		question: "What is Rembrandt lighting in portrait photography?",
+		answer: "Rembrandt lighting is identified by the triangle of light on the cheek. To create proper Rembrandt lighting make sure the eye on the shadow side of the face has light in it and has a catch light, otherwise the eye will be “dead” and not have a nice sparkle. ",
+		source: "Digital Photography School",
+		sourceUrl: "http://digital-photography-school.com/6-portrait-lighting-patterns-every-photographer-should-know/"
+	},
+	{
+		question: "What is butterfly lighting in portrait photography?",
+		answer: "Butterfly lighting is aptly named for the butterfly shaped shadow that is created under the nose by placing the main light source above and directly behind the camera.",
+		source: "Digital Photography School",
+		sourceUrl: "http://digital-photography-school.com/6-portrait-lighting-patterns-every-photographer-should-know/"
+	},
+	{
+		question: "What's the maximum aerial height for drone photography?",
+		answer: "133 metres (400 feet)",
+		source: "Digital Photography School",
+		sourceUrl: "hhttp://digital-photography-school.com/how-to-use-drones-to-do-stunning-aerial-photography/"
 	}
 ];
