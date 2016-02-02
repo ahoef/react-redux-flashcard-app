@@ -6,17 +6,17 @@ import sass from 'gulp-ruby-sass';
 gulp.task('default', ['browserify', 'sass', 'watch']);
 
 gulp.task('browserify', () => {
-  return browserify('src/js/components/app.js')
-    .transform('babelify')
-    .bundle()
-    .pipe(source('bundle.js'))
-    .pipe(gulp.dest('dist'));
+    return browserify('src/js/components/app.js')
+        .transform('babelify')
+        .bundle()
+        .pipe(source('bundle.js'))
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('sass', () => {
-  return sass('src/css/site.scss')
-    .on('error', sass.logError)
-    .pipe(gulp.dest('dist'));
+    return sass('src/css/site.scss')
+        .on('error', sass.logError)
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function() {
